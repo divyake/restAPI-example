@@ -12,7 +12,7 @@ const alienSchema = new mongoose.Schema({
         required: true
     },
     sub: {
-        type: Boolean,
+        type: Number,
         required: true,
         default: false
     }

@@ -22,6 +22,7 @@ router.get('/:id', async(req,res) => {
 })
 
 
+
 router.post('/', async(req,res) => {
     const alien = new Alien({
         name: req.body.name,
@@ -33,7 +34,7 @@ router.post('/', async(req,res) => {
         const a1 =  await alien.save() 
         res.json(a1)
     }catch(err){
-        res.send('Error')
+        res.send('Error ' + err)
     }
 })
 
@@ -41,10 +42,11 @@ router.patch('/:id',async(req,res)=> {
     try{
         const alien = await Alien.findById(req.params.id) 
         alien.sub = req.body.sub
+        alien.tech = req.body.tech
         const a1 = await alien.save()
         res.json(a1)   
     }catch(err){
-        res.send('Error')
+        res.send('Error ' + err)
     }
 
 })

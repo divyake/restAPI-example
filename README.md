@@ -1,3 +1,3 @@
 # restAPI-example
 
-A rest api created using MongoDB, Express and Node.js to learnt he concepts of rest API.
+An api created using MongoDB, Express and Node.js to learn he concepts of rest API.
